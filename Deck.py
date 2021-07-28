@@ -13,7 +13,8 @@ class Deck:
     """Deck class."""
 
     def __init__(self):
-        values = [n for n in range(2, 11)] + ['Jack', 'Queen', 'King', 'Ace']
+        # + ['Jack', 'Queen', 'King', 'Ace']
+        values = [n for n in range(2, 15)]
         colors = ['hearts', 'diamonds', 'spades', 'clubs']
         self.cards = [Card(value, color)
                       for value in values for color in colors]

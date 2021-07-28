@@ -11,13 +11,17 @@ class Player:
         """Add card to the hand."""
         self.hand.append(card)
 
+    def sort(self):
+        """Sort the cards ranging from lowest value to highest value."""
+        self.hand.sort(key=lambda card: card.value)
+
     def show(self):
         """Show the cards the player has on their hand in the terminal."""
         for card in self.hand:
             print(card.value, card.color)
 
     def size(self):
-        """Return amount of cards in the player's hand."""
+        """Return amount of cards on the player's hand."""
         return len(self.hand)
 
 
@@ -45,6 +49,14 @@ class Players:
             for player in player_dict:
                 player_dict[player].add(deck.pull())
 
+    def sort(self):
+        """
+        Sort the cards each player has on their hand
+        ranging from lowest value to highest value.
+        """
+        for player in self.player_dict:
+            self.player_dict[player].sort()
+
     def show(self):
         """Show the cards each player has on their hand in the terminal."""
         for player in self.player_dict:
@@ -68,6 +80,9 @@ if __name__ == "__main__":
 
     # Show remaining cards in the deck
     deck.show()
+
+    # Sort the cards each player has on their hand
+    players.sort()
 
     # Show the cards each player has on their hand
     players.show()
