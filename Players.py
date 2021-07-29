@@ -11,6 +11,12 @@ class Player:
         """Add card to the hand."""
         self.hand.append(card)
 
+    def pull(self, index):
+        """Pull out a card with a specific index out of the player's hand."""
+        card = self.hand[index]
+        del self.hand[index]
+        return card
+
     def sort(self):
         """Sort the cards ranging from lowest value to highest value."""
         self.hand.sort(key=lambda card: card.value)
@@ -30,9 +36,10 @@ class Players:
 
     def __init__(self, number_of_players):
         self.number_of_players = number_of_players
-        self.player_dict = {}
-        for n in range(1, number_of_players + 1):
-            self.player_dict[f"player_{n}"] = Player()
+        self.player_names = [
+            f"player_{n}" for n in range(1, number_of_players + 1)]
+        self.player_dict = {player_name: Player()
+                            for player_name in self.player_names}
 
     def card_split_amount(self):
         """
