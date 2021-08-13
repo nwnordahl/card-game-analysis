@@ -18,12 +18,15 @@ if __name__ == "__main__":
     # Sort the cards each player has on their hand
     players.sort()
 
+    players.show()
+
     # Cycle through the players indefinitely times
     for player_name in itertools.cycle(players.player_names):
         player = players.player_dict[player_name]
         # Add the lowest card in value if stack is empty
         if stack.size() == 0:
-            stack.add(player.pull(0))
+            stack.add(player.pull())
+            print(player_name)
 
             # Check if the player has won by getting rid of all their cards
             if player.size() == 0:
@@ -34,7 +37,12 @@ if __name__ == "__main__":
             for index in range(player.size()):
                 if player.hand[index].value >= stack.previous_card().value:
                     stack.add(player.pull(index))
+                    print(player_name)
                     break
+
+                # Check if player is not able to play
+                if index == player.size() - 1:
+                    stack.empty()
 
             # Check if the player has won by getting rid of all their cards
             if player.size() == 0:
