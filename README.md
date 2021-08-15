@@ -1,4 +1,4 @@
-# Daifugo Analysis: Tools to analyse the card game Daifugo
+# Card Game Analysis: Tools to analyse card games
 
 This project was started with the motivation of showing how unfair the card game Daifugo is. Please note that the project is under active development, and there's still a lot of things to add.
 
@@ -9,26 +9,26 @@ The recommended way to install is by using [pip](https://pypi.org/project/pip/).
 ### Install
 
 ```shell
-$ pip install daifugo-analysis
+$ pip install card-game-analysis
 ```
 
 ### Update
 
 ```shell
-$ pip install -U daifugo-analysis
+$ pip install -U card-game-analysis
 ```
 
 ### Uninstall
 
 ```shell
-$ pip uninstall daifugo-analysis
+$ pip uninstall card-game-analysis
 ```
 
 ## Documentation
 
 Documentation is hosted on readthedocs.org:
 
-https://daifugo-analysis.readthedocs.io/en/latest
+https://card-game-analysis.readthedocs.io/en/latest
 
 ## Relevant links
 
@@ -38,4 +38,4 @@ https://daifugo-analysis.readthedocs.io/en/latest
 
 ## License
 
-Daifugo-analysis is [MIT licensed](https://github.com/nwnordahl/daifugo-analysis/blob/master/LICENSE).
+Card-game-analysis is [MIT licensed](https://github.com/nwnordahl/card-game-analysis/blob/master/LICENSE).
