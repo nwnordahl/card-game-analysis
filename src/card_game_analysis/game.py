@@ -11,7 +11,7 @@ if __name__ == "__main__":
     stack = Stack()
 
     # Initialize players, and distribute the cards in the deck among them
-    number_of_players = int(input("Number of players? "))
+    number_of_players = 4
     players = Players(number_of_players)
     players.distribute_cards(deck)
 
