@@ -24,6 +24,29 @@ $ pip install -U card-game-analysis
 $ pip uninstall card-game-analysis
 ```
 
+## Quick Usage Example
+
+```pycon
+>>> import card_game_analysis # Import the package
+>>> deck = card_game_analysis.Deck() # Create a deck instance
+>>> deck.shuffle() # Shuffle the deck
+>>> card = deck.pull() # Pull out a card of the deck
+>>> print(card.value, card.color) # Print card value and color to the terminal
+10 spades
+>>> print(deck.size()) # Print the amount of cards that is left in the deck to the terminal
+51
+>>> deck.show() # Print the remaining cards to the terminal
+Remaining cards in the deck:
+----------------------------
+Value: 2, Color: hearts
+Value: 5, Color: diamonds
+Value: 13, Color: clubs
+            .
+            .
+            .
+Value: 5, Color: hearts
+```
+
 ## Documentation
 
 Documentation is hosted on readthedocs.org:

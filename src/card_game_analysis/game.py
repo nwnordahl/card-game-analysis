@@ -1,5 +1,6 @@
-from Deck import Deck, Stack
-from Players import Players
+from card_game_analysis.deck import Deck
+from card_game_analysis.stack import Stack
+from card_game_analysis.players import Players
 import itertools
 
 if __name__ == "__main__":
