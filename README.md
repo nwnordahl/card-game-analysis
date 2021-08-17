@@ -1,10 +1,20 @@
 # Card Game Analysis: Tools to analyse card games
 
-This project was started with the motivation of showing how unfair the card game Daifugo is. Please note that the project is under active development, and there's still a lot of things to add.
+This project was started with the motivation of showing how unfair the card game Daifugo is,
+but as the project evolved it turned out to be
+applicable for analyzes of a wide variety of card games.
+
+The package is divided in several parts: *deck*, *players*, *game logic* for different games, and *tools for analyzing games*.
+The author has prioritized readability over optimizations.
+For example, the program follows an identical order to how one would play cards in the real world:
+start with an ordered deck, stack the deck, deal the cards in correct order.
+
+Please note that the project is under active development, and there's still a lot of things to add.
 
 ## Install/Update/Uninstall with [pip](https://pypi.org/project/pip/)
 
-The recommended way to install is by using [pip](https://pypi.org/project/pip/).
+This package is hosted at [The Python Package Index (PyPI)](https://pypi.org/).
+Therefore, the recommended way to install is by using [pip](https://pypi.org/project/pip/):
 
 ### Install
 
@@ -12,17 +22,34 @@ The recommended way to install is by using [pip](https://pypi.org/project/pip/).
 $ python -m pip install card-game-analysis
 ```
 
+To verify, run
+
+```console
+$ python -m pip show card-game-analysis
+```
+
+and you should get some information about the package if the installation was successful.
+
 ### Update
+
+To update, simply add the -U (or --upgrade) flag:
 
 ```shell
 $ python -m pip install -U card-game-analysis
 ```
+
+**Note:** Sometimes you need administrator privileges to run above command successfully.
 
 ### Uninstall
 
 ```shell
 $ python -m pip uninstall card-game-analysis
 ```
+
+**Note:** This package has been packaged and distributed according to the steps
+described here:
+
+https://packaging.python.org/tutorials/packaging-projects/
 
 ## Quick Usage Example
 
@@ -57,8 +84,31 @@ Documentation is hosted on readthedocs.org:
 
 https://card-game-analysis.readthedocs.io/en/latest
 
+### Build Locally
+
+The documentation can also be built locally. Clone this directory with Git:
+
+```console
+$ git clone https://github.com/nwnordahl/card-game-analysis.git
+```
+
+Then make sure you have installed Sphinx with pip:
+
+```console
+$ python -m pip install -U sphinx
+```
+
+Move to the `docs` directory and run
+
+```console
+$ make html
+```
+
+You can then read the documentation by open `docs/build/html/index.html` in your web browser.
+
 ## Testing
 First of all you need to locally install this package with pip.
+(This step has to be done every time there is a change in the `src`.)
 This can be done by running the following command in the terminal:
 
 ```console
@@ -80,6 +130,8 @@ $ pytest
 ## Relevant links
 
 [Standard 52-card deck Wikipedia article](https://en.wikipedia.org/wiki/Standard_52-card_deck)
+
+[Card game Wikipedia article](https://en.wikipedia.org/wiki/Card_game)
 
 [Daifugo Wikipedia article](https://en.wikipedia.org/wiki/Daifug%C5%8D)
 
