@@ -9,22 +9,26 @@ The recommended way to install is by using [pip](https://pypi.org/project/pip/).
 ### Install
 
 ```shell
-$ pip install card-game-analysis
+$ python -m pip install card-game-analysis
 ```
 
 ### Update
 
 ```shell
-$ pip install -U card-game-analysis
+$ python -m pip install -U card-game-analysis
 ```
 
 ### Uninstall
 
 ```shell
-$ pip uninstall card-game-analysis
+$ python -m pip uninstall card-game-analysis
 ```
 
 ## Quick Usage Example
+
+Here is a quick example, using IDLE, demonstrating how to construct a new Deck instance, 
+as well as how to shuffle the deck, and pull out a card of the deck.
+Then we'll print a listing of the contents of the remaining of the deck.
 
 ```pycon
 >>> import card_game_analysis # Import the package
@@ -52,6 +56,19 @@ Value: 5, Color: hearts
 Documentation is hosted on readthedocs.org:
 
 https://card-game-analysis.readthedocs.io/en/latest
+
+## Testing
+You need pytest to run the tests. The recommended way to install is by using [pip](https://pypi.org/project/pip/):
+
+```console
+$ python -m pip install -U pytest
+```
+
+Tests can be run in the root directory with the command
+
+```console
+$ pytest
+```
 
 ## Relevant links
 
