@@ -31,8 +31,8 @@ as well as how to shuffle the deck, and pull out a card of the deck.
 Then we'll print a listing of the contents of the remaining of the deck.
 
 ```pycon
->>> import card_game_analysis # Import the package
->>> deck = card_game_analysis.Deck() # Create a deck instance
+>>> import card_game_analysis as cga # Import the package
+>>> deck = cga.Deck() # Create a deck instance
 >>> deck.shuffle() # Shuffle the deck
 >>> card = deck.pull() # Pull out a card of the deck
 >>> print(card.value, card.color) # Print card value and color to the terminal
@@ -58,6 +58,13 @@ Documentation is hosted on readthedocs.org:
 https://card-game-analysis.readthedocs.io/en/latest
 
 ## Testing
+First of all you need to locally install this package with pip.
+This can be done by running the following command in the terminal:
+
+```console
+$ python -m pip install .
+```
+
 You need pytest to run the tests. The recommended way to install is by using [pip](https://pypi.org/project/pip/):
 
 ```console
