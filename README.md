@@ -2,7 +2,7 @@
 
 This project was started with the motivation of showing how unfair the card game Daifugo is,
 but as the project evolved it turned out to be
-applicable for analyzes of a wide variety of card games.
+applicable for analyzing a wide variety of card games.
 
 The package is divided in several parts: *deck*, *players*, *game logic* for different games, and *tools for analyzing games*.
 The author has prioritized readability over optimizations.
@@ -51,6 +51,23 @@ described here:
 
 https://packaging.python.org/tutorials/packaging-projects/
 
+### Install Locally
+
+It is also possible to clone this repository, and install the package locally.
+To do so, run
+
+```console
+$ git clone https://github.com/nwnordahl/card-game-analysis.git
+```
+
+to clone the repository, and then
+
+```console
+$ python -m pip install .
+```
+
+in the root directory of this project to install the package locally on your machine.
+
 ## Quick Usage Example
 
 Here is a quick example, using IDLE, demonstrating how to construct a new Deck instance, 
@@ -76,6 +93,13 @@ Value: 13, Color: clubs
             .
             .
 Value: 5, Color: hearts
+```
+
+**Note:** To make things simpler, you can use the following abbrevation when importing
+the package into your scripts:
+
+```python
+import card_game_analysis as cga
 ```
 
 ## Documentation
@@ -107,6 +131,9 @@ $ make html
 You can then read the documentation by open `docs/build/html/index.html` in your web browser.
 
 ## Testing
+
+### Setup
+
 First of all you need to locally install this package with pip.
 (This step has to be done every time there is a change in the `src`.)
 This can be done by running the following command in the terminal:
@@ -121,11 +148,17 @@ You need pytest to run the tests. The recommended way to install is by using [pi
 $ python -m pip install -U pytest
 ```
 
+### Testing Framework
+
 Tests can be run in the root directory with the command
 
 ```console
 $ pytest
 ```
+
+**Note:** The tests will base itself on the package version that is installed.
+This means that if you make changes to the actual source code, these changes will not be included in the testing
+until you have reinstalled the package locally.
 
 ## Relevant links
 
